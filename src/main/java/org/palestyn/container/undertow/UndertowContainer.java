@@ -49,7 +49,7 @@ public class UndertowContainer extends PalestynContainer {
 		UndertowJaxrsServer server=new UndertowJaxrsServer();
 
 		ResteasyDeployment deployment = new ResteasyDeploymentImpl();
-        deployment.setInjectorFactoryClass(CDI_INJECTION_FACTORY);
+        //deployment.setInjectorFactoryClass(CDI_INJECTION_FACTORY);
         deployment.setApplicationClass(applicationClass);
         
         DeploymentInfo deploymentBuilder = server
