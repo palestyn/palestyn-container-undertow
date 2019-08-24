@@ -21,27 +21,12 @@
 			<artifactId>palestyn-container-base</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 		<!-- resteasy -->
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-cdi</artifactId>
 			<version>4.2.0.Final</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.jboss.logging</groupId>
-					<artifactId>jboss-logging</artifactId>
-				</exclusion>
-				<!--  part of hibernate, to avoid duplication in maven shade plugin -->
-				<exclusion>
-					<groupId>org.jboss.spec.javax.xml.bind</groupId>
-					<artifactId>jboss-jaxb-api_2.3_spec</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.jboss.weld</groupId>
-					<artifactId>weld-api</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
 		<!-- json binding -->
@@ -49,17 +34,6 @@
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-json-binding-provider</artifactId>
 			<version>4.2.0.Final</version>
-			<!--  1.1.5 is part of yasson, to avoid duplication in maven shade plugin -->
-			<exclusions>
-				<exclusion>
-					<groupId>org.jboss.logging</groupId>
-					<artifactId>jboss-logging</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.glassfish</groupId>
-					<artifactId>javax.json</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
 		<!-- resteasy undertow bridge -->
@@ -67,17 +41,6 @@
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-undertow</artifactId>
 			<version>4.2.0.Final</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.jboss.logging</groupId>
-					<artifactId>jboss-logging</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.logging</groupId>
-			<artifactId>jboss-logging</artifactId>
-			<version>3.4.0.Final</version>
 		</dependency>
 
 		<!-- weld -->
@@ -85,22 +48,11 @@
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet-core</artifactId>
 			<version>3.1.2.Final</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.jboss.spec.javax.annotation</groupId>
-					<artifactId>
-						jboss-annotations-api_1.2_spec
-					</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.jboss.logging</groupId>
-					<artifactId>jboss-logging</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.jboss.weld</groupId>
-					<artifactId>weld-api</artifactId>
-				</exclusion>
-			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.weld</groupId>
+			<artifactId>weld-api</artifactId>
+			<version>3.1.SP1</version>
 		</dependency>
 	</dependencies>
 </project>
